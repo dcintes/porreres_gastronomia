@@ -48,6 +48,11 @@ h1::after {
     margin: .5em auto;
 }
 
+h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid var(--primary);
+}
+
 .pull-right{
     text-align: right;
 }
@@ -59,6 +64,11 @@ a {
 .fluid-2{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+}
+
+.fluid-2-asim {
+    grid-template-columns: 3fr 1fr;
 }
 
 @media(max-width: 576px) {
@@ -132,6 +142,16 @@ body#portada {
     text-align: center;
     padding: .5em;
     border-radius: .3em;
+}
+
+/* Producte */
+#ingredients li:first-letter {
+    text-transform: capitalize;
+}
+
+#ingredients ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 
