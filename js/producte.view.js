@@ -5,9 +5,9 @@ class ProducteView {
     constructor(){
         this.data = require('./data');
         const url = new URLSearchParams(window.location.search);
-        this.producte = this.data.productes.find(e => e.id = url.get('id'));
-        console.log(url.get('id'));
-        this.contenidor = document.querySelector('#productes');
+        this.producte = this.data.productes.find(e => e.id == url.get('id'));
+        this.capsalera = document.querySelector('#capsalera');
+        
         this.images = require('../img/*.*');
 
         this.mostraProducte();
@@ -15,6 +15,8 @@ class ProducteView {
     }
 
     mostraProducte(){
+
+        capsalera.style.backgroundImage = `url('${tools.getImage(this.images, this.producte.background)}')`
 
         tools.getElement('#nom').innerHTML = this.producte.nom;
 

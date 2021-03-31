@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=PT+Serif&display=swap');
+@import './node_modules/material-design-icons/iconfont/material-icons.css';
+
 
 :root {
     --primary: #ffa726;
@@ -37,15 +39,11 @@ body {
 
 h1 {
     font-size: 4rem;
-}
-
-h1::after {
-    content: '';
-    background-color: var(--text-dark);
-    width: 20%;
-    height: 6px;
-    display: block;
-    margin: .5em auto;
+    text-align: center;
+    padding: .3em 1em;
+    background-color: var(--primary);
+    border-radius: .1em;
+    /*text-shadow: #000000 0 0 2em;*/
 }
 
 h2 {
@@ -53,12 +51,22 @@ h2 {
     border-bottom: 3px solid var(--primary);
 }
 
-.pull-right{
-    text-align: right;
+p{
+    font-size: 1.2rem;
 }
 
 a {
     text-decoration: none;
+}
+
+img {
+    width: 100%;
+    border-radius: .5em;
+}
+
+/* Tools */
+.pull-right{
+    text-align: right;
 }
 
 .fluid-2{
@@ -78,6 +86,10 @@ a {
 }
 
 /* Header */
+header {
+    background-color: #ffffff;
+}
+
 header .container {
     display: flex;
     justify-content: space-between;
@@ -86,8 +98,12 @@ header .container {
 
 header nav ul {
     list-style-type: none;
-    margin: 0;
+    padding: 0;
     display: flex;
+}
+
+header nav#menu li:first-child {
+    display: none;
 }
 
 header nav a {
@@ -105,10 +121,56 @@ header img.logo {
     width: 200px;
 }
 
+@media(max-width: 768px){
+
+    header nav#menu li {
+        display: none;
+        font-size: 2rem;
+        padding: 1em;
+        padding-top: 0;
+        text-align: right;
+    }
+
+    header nav#menu li:first-child {
+        display: block;
+        padding-top: 1em;
+    }
+
+    header nav#menu .material-icons {
+        font-size: 3rem;
+    }
+
+    header nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    header nav#menu ul.responsive_menu li {
+        display: block;
+        background-color: #ffffff;
+    }
+}
+
 /* Portada */
 body#portada {
     width: 100vw;
     height: 100vh;
+    background-image: url('./img/portada.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Capçaleres */
+.capsalera_bg {
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1em solid var(--primary);
 }
 
 .capsalera {
@@ -118,8 +180,19 @@ body#portada {
     flex-direction: column;
     height: 50vh;
     margin-bottom: 10vh;
-    
-    background-color: lightgreen;
+    min-height: 300px; 
+}
+
+#sobre_nosaltres .capsalera {
+    background-image: url('./img/sobre_nosaltres_bg.jpg');
+}
+
+#productes .capsalera {
+    background-image: url('./img/productes.jpg');
+}
+
+#enllasos .capsalera {
+    background-image: url('./img/enllasos.jpg');
 }
 
 /* Productes */
@@ -127,7 +200,7 @@ body#portada {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 3rem;
-    padding: 1rem;
+    padding: 3rem;
 }
 
 .producte img{
@@ -138,10 +211,12 @@ body#portada {
 .producte a {
     background-color: var(--primary);
     color: var(--text-dark);
+    border: 1px solid var(--primary-d);
     display: block;
     text-align: center;
     padding: .5em;
     border-radius: .3em;
+    font-weight: bold;
 }
 
 /* Producte */
