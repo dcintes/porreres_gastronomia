@@ -23,6 +23,7 @@
     "rimraf": "^3.0.2"
   },
   "dependencies": {
+    "leaflet": "^1.7.1",
     "material-design-icons": "^3.0.1"
   }
 }

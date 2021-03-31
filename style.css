@@ -229,6 +229,11 @@ body#portada {
     padding: 0;
 }
 
+#mapa {
+    width: 100%;
+    height: 50vh;
+}
+
 
 /* footer */
 footer {

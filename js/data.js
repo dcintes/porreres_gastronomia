@@ -46,8 +46,8 @@ module.exports = {
         {
             id: 1,
             nom: 'Carnisseria alt',
-            descripcio: '',
-            logo: '',
+            descripcio: 'Desde 1978 tots els productes carnics',
+            logo: 'carnisseria1.png',
             direccio: 'Carrer del General Barceló 07260 Porreres',
             coordenades: [39.5145835,3.021983]
         },
