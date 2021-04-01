@@ -43,7 +43,15 @@ h1 {
     padding: .3em 1em;
     background-color: var(--primary);
     border-radius: .1em;
-    /*text-shadow: #000000 0 0 2em;*/
+    margin: .5em;
+    opacity: .9;
+}
+
+@media(max-width: 768px){
+    h1 {
+        font-size: 3rem;
+        padding: .3em;
+    }
 }
 
 h2 {
@@ -232,6 +240,26 @@ body#portada {
 #mapa {
     width: 100%;
     height: 50vh;
+}
+
+.relacionats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 3rem;
+}
+
+.relacionats a {
+    position: relative;
+}
+
+.relacionats h3 {
+    background-color: var(--primary);
+    color: var(--text-dark);
+    padding: .5em 2em;
+    position:absolute;
+    bottom: 1em;
+    border-top-right-radius: .5em;
+    border-bottom-right-radius: .5em;
 }
 
 

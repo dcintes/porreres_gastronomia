@@ -21,25 +21,31 @@ module.exports = {
         {
             id: 2,
             nom: "Panada",
-            descripcio: `<p>
-            La panada és una pasta cuita normalment de farina, en forma d'una capsa rodona o triangular, farcida de carn, de peix o de verdura.
-           </p>
-           <p>
-            Les panades eren elaboracions molt preuades a l'època moderna. De la mateixa manera que les coques de recapte, admetien tot tipus de variacions. Es farcien amb carn, peix i sobretot verdures, ja que era l'opció més econòmica. En aquell temps, els espinacs a la catalana, amb panses i pinyons, ja eren molt populars i era freqüent utilitzar-los per farcir els panadons.
-           </p>
-           <p>
-            Ja s'esmenten en el Llibre de Sent Sovídel segle xiv, el primer receptari conegut de cuina catalana. Concretament descriu tres receptes en els capítols 134, 138 i 139 que elaborava el panicer com s'anomenava a l'època al forner. Eren preparacions molt populars als Països Catalans i a tot Europa fins a final del segle xvii. Apareixen per exemple als receptaris antics Arte de Cozina de Diego Granado (1599) o bé Le pastissier françois (1653)
-           </p>
-           <p>
-            Els panadons es condimentaven amb espècies per aconseguir sabors més intensos i també admetien opcions dolces, com els de fruites. Aquestes menges eren fàcils de conservar i transportar, i es podien prendre tant calentes com fredes, característiques que resultaven molt pràctiques per als viatgers de l'època.
-           </p>`,
+            descripcio: `<p>La panada és una pasta cuita normalment de farina, en forma d'una capsa rodona o triangular, farcida de carn, de peix o de verdura.</p>
+            <p>Les panades eren elaboracions molt preuades a l'època moderna. De la mateixa manera que les coques de recapte, admetien tot tipus de variacions. Es farcien amb carn, peix i sobretot verdures, ja que era l'opció més econòmica. En aquell temps, els espinacs a la catalana, amb panses i pinyons, ja eren molt populars i era freqüent utilitzar-los per farcir els panadons.</p>
+            <p>Ja s'esmenten en el Llibre de Sent Sovídel segle xiv, el primer receptari conegut de cuina catalana. Concretament descriu tres receptes en els capítols 134, 138 i 139 que elaborava el panicer com s'anomenava a l'època al forner. Eren preparacions molt populars als Països Catalans i a tot Europa fins a final del segle xvii. Apareixen per exemple als receptaris antics Arte de Cozina de Diego Granado (1599) o bé Le pastissier françois (1653)</p>
+            <p>Els panadons es condimentaven amb espècies per aconseguir sabors més intensos i també admetien opcions dolces, com els de fruites. Aquestes menges eren fàcils de conservar i transportar, i es podien prendre tant calentes com fredes, característiques que resultaven molt pràctiques per als viatgers de l'època.</p>`,
             imatge: "panada.jpg",
             background: "panada_bg.jpeg",
             comercos: [
-                1
+                1, 2
             ],
             ingredients: ['carn','farina','verdura'],
-            etiquetes: ['pasta','carn']
+            etiquetes: ['forn','carn']
+        },
+        {
+            id: 3,
+            nom: "Rubiol",
+            descripcio: `<p>El rubiol &eacute;s una pasta t&iacute;pica de Mallorca i Menorca consistent en una pe&ccedil;a de pasta de farina fina, pastada amb oli, sa&iuml;m i ou, doblegada en forma semicircular i amb un farcit dol&ccedil; o salat.</p>
+            <p>A Mallorca, els rubiols s&oacute;n dol&ccedil;os i poden estar farcits de brossat, flam, confitura o altres dol&ccedil;os. Els rubiols a Menorca s&oacute;n salats i es mengen t&iacute;picament per festes majors. Aquests poden ser de sofregit, de peix, de carn o d&apos;espinacs, que solen tenir tamb&eacute; panses i pinyons.</p>
+            <p>&Eacute;s tamb&eacute; una menja t&iacute;pica de les festes de Pasqua</p>`,
+            imatge: "rubiol.jpg",
+            background: "rubiols_bg.jpg",
+            comercos: [
+                2
+            ],
+            ingredients: ['farina','xolocate', 'confitura'],
+            etiquetes: ['forn','reposteria','dolç']
         }
     ],
     comercos: [
@@ -51,6 +57,13 @@ module.exports = {
             direccio: 'Carrer del General Barceló 07260 Porreres',
             coordenades: [39.5145835,3.021983]
         },
-
+        {
+            id: 2,
+            nom: 'Forn de plaça',
+            descripcio: 'Forn de poble de tota la vida',
+            logo: 'forn1.png',
+            direccio: 'Carrer de sa Galla 07260 Porreres',
+            coordenades: [39.515823, 3.022227]
+        },
     ]
 };
