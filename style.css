@@ -137,6 +137,7 @@ header img.logo {
         padding: 1em;
         padding-top: 0;
         text-align: right;
+        z-index: 100;
     }
 
     header nav#menu li:first-child {
