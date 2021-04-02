@@ -263,6 +263,34 @@ body#portada {
     border-bottom-right-radius: .5em;
 }
 
+/* Credits */
+.credit {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 2em;
+}
+
+.credit p {
+    margin: .2em;
+}
+
+.credit p:nth-child(odd){
+    color: var(--primary-d);
+    font-weight: bold;
+    
+}
+
+@media (min-width: 768px) {
+
+    .credit {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+    }
+
+    .credit p:nth-child(odd){
+        text-align: right;
+    }
+}
 
 /* footer */
 footer {
