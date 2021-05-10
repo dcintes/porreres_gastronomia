@@ -5,7 +5,10 @@ class ProductesView {
     constructor(){
         this.data = require('./data');
         this.contenidor = document.querySelector('#productes .grid-productes');
+
         this.images = require('../img/*.*');
+
+
 
         this.mostraProductes();
         
