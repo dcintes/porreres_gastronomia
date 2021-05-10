@@ -42,9 +42,7 @@ h1 {
     text-align: center;
     padding: .3em 1em;
     background-color: var(--primary);
-    border-radius: .1em;
-    margin: .5em;
-    opacity: .9;
+    width: 100%;
 }
 
 @media(max-width: 768px){
@@ -68,8 +66,7 @@ a {
 }
 
 img {
-    width: 100%;
-    border-radius: .5em;
+    max-width: 100%;
 }
 
 /* Tools */
@@ -167,41 +164,27 @@ header img.logo {
 body#portada {
     width: 100vw;
     height: 100vh;
-    background-image: url('./img/portada.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-/* Capçaleres */
-.capsalera_bg {
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-bottom: 1em solid var(--primary);
+    overflow: hidden;
+    background-color: var(--primary);
 }
 
 .capsalera {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
     margin-bottom: 10vh;
-    min-height: 300px; 
 }
 
-#sobre_nosaltres .capsalera {
-    background-image: url('./img/sobre_nosaltres_bg.jpg');
+.capsalera h1 {
+    position: absolute;
 }
+    
 
-#productes .capsalera {
-    background-image: url('./img/productes.jpg');
-}
-
-#enllasos .capsalera {
-    background-image: url('./img/enllasos.jpg');
+body#portada .capsalera img {
+    max-height: 80vh;
+    clip-path: polygon(75% 0, 91% 18%, 83% 38%, 100% 56%, 94% 62%, 78% 57%, 60% 83%, 20% 100%, 3% 98%, 0 80%, 11% 66%, 2% 55%, 27% 17%);
 }
 
 /* Productes */
@@ -213,19 +196,17 @@ body#portada {
 }
 
 .producte img{
-    width: 100%;
     border-radius: 1em;
 }
 
-.producte a {
-    background-color: var(--primary);
-    color: var(--text-dark);
-    border: 1px solid var(--primary-d);
-    display: block;
-    text-align: center;
-    padding: .5em;
-    border-radius: .3em;
-    font-weight: bold;
+img.producte_preview {
+    width: 100%;
+    clip-path: circle(65%);
+    transition: clip-path 1s;
+}
+
+img.producte_preview:hover {
+    clip-path: circle(50%);
 }
 
 /* Producte */
@@ -236,6 +217,10 @@ body#portada {
 #ingredients ul {
     list-style-type: none;
     padding: 0;
+}
+
+#ingredients img {
+    border-radius: 10px;
 }
 
 #mapa {
@@ -258,7 +243,7 @@ body#portada {
     color: var(--text-dark);
     padding: .5em 2em;
     position:absolute;
-    bottom: 1em;
+    bottom: 3em;
     border-top-right-radius: .5em;
     border-bottom-right-radius: .5em;
 }
@@ -272,6 +257,7 @@ body#portada {
 
 .credit p {
     margin: .2em;
+    word-break: break-all;
 }
 
 .credit p:nth-child(odd){
@@ -297,3 +283,50 @@ footer {
     background-color: var(--text-dark);
     color: var(--text-light);
 }
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer a {
+    font-size: 1.3rem;
+    color: var(--text-light);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    footer, footer .pull-right {
+        text-align: center;
+    }
+}
+
+/* Animació svg */
+@keyframes moviment {
+    0% { 
+        transform: scale(1.0); 
+    }
+    25% { 
+        transform: scale(1.1) translate(10%, -50%);
+    }
+    50% { 
+        transform: scale(1.0) translate(25%); 
+    }
+    75% { 
+        transform: scale(1.1) translate(35%, -50%); 
+    }
+    100% { 
+        transform: scale(1.0) translate(50%); 
+    }
+ }
+
+ #fruita {
+    animation-name: moviment;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+ }

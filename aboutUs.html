@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="ca">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nosaltres - Porreres es gastronomia</title>
-
-    <link rel="stylesheet" href="./style.css">
-</head>
+<include src="components/head.html" locals='{"titol":"Sobre nosaltres - Porreres es gastronomia"}'></include>
 
 <body>
     <include src="components/header.html"></include>
@@ -16,14 +9,31 @@
     <main id="sobre_nosaltres">
         <article>
             <div class="capsalera capsalera_bg">
+                <picture>
+                    <source media="(max-width: 576px)" srcset="./img/portada-576.jpg">
+                    <source media="(max-width: 992px)" srcset="./img/portada-992.jpg">
+                    <img src="./img/sobre_nosaltres_bg.jpg" alt="Vista aerea de porreres">
+                </picture>
                 <h1>Sobre nosaltres</h1>
             </div>
 
             <div class="container fluid-2">
                 <div class="imatge">
-                    <img src="./img/porreres.jpg" alt="Imatge plaça de la vila Porreres">
+                    <img src="./img/porreres.jpg" alt="Imatge plaça de la vila Porreres" loading="lazy"
+                        srcset="./img/porreres-375.jpg 375w, ./img/porreres.jpg 500w">
                 </div>
                 <div>
+                    <svg viewBox="0 0 400 250">
+                        <svg y=110 style="overflow: visible;">
+                            <g id="fruita">
+                                <circle style="fill:#ff7f2a;stroke:none;stroke-width:0.499999" cx="83.550667"
+                                    cy="99.691704" r="33.486832" />
+                                <path
+                                    style="fill:#008000;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                    d="m 82.940079,66.19215 c 3.652357,-14.050904 5.096868,-29.492595 21.990931,-35.045355 1.0347,2.17723 3.70542,3.539246 6.46989,4.854549 -24.441418,5.564525 -20.090954,18.895949 -20.639075,31.068854 -2.489099,1.287189 -4.153279,3.937549 -5.104296,7.766407 -0.803863,-3.164206 -1.456115,-6.748834 -2.71745,-8.644455 z" />
+                            </g>
+                        </svg>
+                    </svg>
                     <p>Porreres es gastronomia es un espai per donar a conèixer els productes gastronòmics d'aquest
                         poble, Porreres, situat al pla de Mallorca a les Illes Balears.</p>
                     <p>Dins aquest portal podreu trobar els productes típics elaborats localment així com informació

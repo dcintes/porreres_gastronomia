@@ -24,11 +24,16 @@ class ProductesView {
             const content = tools.createElement('div','producte');
 
             // Imatge
-            const img = tools.createElement('img');
+            const img = tools.createElement('img', 'producte_preview');
             
-            img.setAttribute('src', tools.getImage(this.images, element.imatge));
+            img.setAttribute('src', tools.getImage(this.images, element.imatge.default));
+            img.setAttribute('srcset', `${tools.getImage(this.images, element.imatge['500'])} 500w, ${tools.getImage(this.images, element.imatge.default)} 700w`);
             img.setAttribute('alt', element.nom);
-            content.append(img);
+
+            const link = tools.createElement('a')
+            link.setAttribute('href',`./producte.html?id=${element.id}`);
+            link.append(img);
+            content.append(link);
 
             // Nom
             const nom = tools.createElement('h3');
@@ -40,12 +45,6 @@ class ProductesView {
             des.innerHTML = element.descripcio;
             const p = des.querySelector('p:first-child');
             content.append(p);
-
-            // Enllaç
-            const link = tools.createElement('a')
-            link.setAttribute('href',`./producte.html?id=${element.id}`)
-            link.append(tools.createTextNode('Veure més'));
-            content.append(link);
 
             this.contenidor.append(content);
         });

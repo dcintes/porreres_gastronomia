@@ -20,10 +20,26 @@ class ProducteView {
     mostraProducte(){
 
         // Imatge portada
-        capsalera.style.backgroundImage = `url('${tools.getImage(this.images, this.producte.background)}')`
+        const picture = tools.createElement('picture');
+        for(var key in this.producte.background) {
+            if(key === 'default') {
+                const img = tools.createElement('img');
+                img.setAttribute('src', tools.getImage(this.images, this.producte.background[key]));
+                img.setAttribute('alt', this.producte.nom);
+                picture.append(img);
+            } else {
+                const source = tools.createElement('source');
+                source.setAttribute('srcset', tools.getImage(this.images, this.producte.background[key]));
+                source.setAttribute('media', `(max-width: ${key}px)`);
+                picture.append(source);
+            }
+        }
+        this.capsalera.append(picture);
 
         // nom producte
-        tools.getElement('#nom').innerHTML = this.producte.nom;
+        const titol = tools.createElement('h1');
+        titol.innerHTML = this.producte.nom;
+        this.capsalera.append(titol);
 
         // Descripció
         const desc = tools.createElement('div');
@@ -32,6 +48,7 @@ class ProducteView {
 
         // Ingredients
         const ingredients = tools.getElement('#ingredients');
+
         const ul = tools.createElement('ul');
         ingredients.append(ul);
 
@@ -40,6 +57,12 @@ class ProducteView {
             li.append(tools.createTextNode(e));
             ul.append(li);
         });
+
+        const img = tools.createElement('img');
+        img.setAttribute('src', tools.getImage(this.images, this.producte.imatge.default));
+        img.setAttribute('srcset', `${tools.getImage(this.images, this.producte.imatge['500'])} 500w, ${tools.getImage(this.images, this.producte.imatge.default)} 700w`);
+        img.setAttribute('alt', this.producte.nom);
+        ingredients.append(img);
 
         // Productes relacionats: comparteixen etiquetes
         this.data.productes.forEach( p => {
@@ -66,8 +89,9 @@ class ProducteView {
         link.setAttribute('href',`./producte.html?id=${producte.id}`)
 
         // Imatge
-        const img = tools.createElement('img');
-        img.setAttribute('src', tools.getImage(this.images, producte.imatge));
+        const img = tools.createElement('img', 'producte_preview');
+        img.setAttribute('src', tools.getImage(this.images, producte.imatge.default));
+        img.setAttribute('srcset', `${tools.getImage(this.images, producte.imatge['500'])} 500w, ${tools.getImage(this.images, producte.imatge.default)} 700w`);
         img.setAttribute('alt', producte.nom);
         link.append(img);
 

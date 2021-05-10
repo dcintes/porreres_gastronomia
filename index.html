@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="ca">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porreres es gastronomia</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
+<include src="components/head.html" locals='{"titol":"Porreres es gastronomia"}'></include>
 
 <body id="portada">
 
     <include src="components/header.html"></include>
     <main>
         <div class="capsalera">
+            <picture>
+                <source media="(max-width: 576px)" srcset="./img/portada-576.jpg">
+                <source media="(max-width: 992px)" srcset="./img/portada-992.jpg">
+                <img src="./img/portada.jpg" alt="">
+            </picture>
             <h1>Porreres és gastronomia</h1>
         </div>
     </main>

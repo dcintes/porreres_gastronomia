@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enllaços - Porreres és gastronomia</title>
-
-    <link rel="stylesheet" href="./style.css">
-</head>
+<include src="components/head.html" locals='{"titol":"Enllaços - Porreres es gastronomia"}'></include>
 
 <body>
 
@@ -16,7 +9,12 @@
 
     <main id="enllasos">
         <article>
-            <div class="capsalera capsalera_bg">
+            <div class="capsalera">
+                <picture>
+                    <source media="(max-width: 576px)" srcset="./img/enllasos-500.jpg">
+                    <source media="(max-width: 992px)" srcset="./img/enllasos-937.jpg">
+                    <img src="./img/enllasos.jpg" alt="Imatge de fons dels enllaços">
+                </picture>
                 <h1>Enllaços</h1>
             </div>
 
