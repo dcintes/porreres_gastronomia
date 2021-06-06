@@ -1,4 +1,5 @@
 import * as tools from './tools.js';
+import defaultExport from '../node_modules/leaflet/dist/leaflet.js';
 
 class ProducteView {
 
@@ -8,12 +9,22 @@ class ProducteView {
         this.producte = this.data.productes.find(e => e.id == url.get('id'));
         this.capsalera = tools.getElement('#capsalera');
         this.relacionats = tools.getElement('#relacionats');
+        this.mapContainer = tools.getElement('#mapa');
         
         this.images = require('../img/*.*');
 
-
         this.mostraProducte();
-        this.mapa = this.initMapa();
+        
+        this.io = new IntersectionObserver(
+            entries => {
+                this.mapa = this.initMapa();
+                this.io.unobserve(this.mapContainer);
+            }, {
+                threshold: 0.1
+            }
+          );
+          // Start observing an element
+        this.io.observe(this.mapContainer);
         
     }
 

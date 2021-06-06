@@ -15,7 +15,14 @@
 function createElement(tag, className) {
     const element = document.createElement(tag);
 
-    if (className) element.classList.add(className);
+    if (className) {
+      element.classList.add(className);
+    }
+
+    // Lazy loading
+    if(tag === 'img' || tag === 'iframe') {
+      element.setAttribute('loading','lazy');
+    }
 
     return element;
   }
