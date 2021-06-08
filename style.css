@@ -170,6 +170,7 @@ body#portada {
 }
 
 .capsalera {
+    min-height: 700px;
     position: relative;
     display: flex;
     justify-content: center;
