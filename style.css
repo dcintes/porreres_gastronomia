@@ -124,7 +124,7 @@ header nav a:hover {
 
 img.logo {
     width: 200px;
-    aspect-ratio: 304/105;
+    height:69px;
 }
 
 @media(max-width: 768px){
@@ -189,6 +189,7 @@ body#portada .capsalera img {
 }
 
 .capsalera img {
+    min-height: 700;
 	aspect-ratio: 1918/700;
 }
 
