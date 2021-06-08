@@ -180,12 +180,28 @@ body#portada {
 .capsalera h1 {
     position: absolute;
 }
-    
 
 body#portada .capsalera img {
     max-height: 80vh;
     clip-path: polygon(75% 0, 91% 18%, 83% 38%, 100% 56%, 94% 62%, 78% 57%, 60% 83%, 20% 100%, 3% 98%, 0 80%, 11% 66%, 2% 55%, 27% 17%);
 }
+
+.capsalera img {
+	aspect-ratio 1918/700;
+}
+
+@media(max-width: 576px){
+	.capsalera img {
+		aspect-ratio 543/758;
+	}
+}
+
+@media(max-width: 992px){
+	.capsalera img {
+		aspect-ratio 935/700;
+	}
+}
+
 
 /* Productes */
 .grid-productes{
