@@ -37,6 +37,7 @@ class ProducteView {
                 const img = tools.createElement('img');
                 img.setAttribute('src', tools.getImage(this.images, this.producte.background[key]));
                 img.setAttribute('alt', this.producte.nom);
+                img.setAttribute('height', 700);
                 picture.append(img);
             } else {
                 const source = tools.createElement('source');
