@@ -187,18 +187,18 @@ body#portada .capsalera img {
 }
 
 .capsalera img {
-	aspect-ratio 1918/700;
+	aspect-ratio: 1918/700;
 }
 
 @media(max-width: 576px){
 	.capsalera img {
-		aspect-ratio 543/758;
+		aspect-ratio: 543/758;
 	}
 }
 
 @media(max-width: 992px){
 	.capsalera img {
-		aspect-ratio 935/700;
+		aspect-ratio: 935/700;
 	}
 }
 
