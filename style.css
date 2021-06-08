@@ -122,8 +122,9 @@ header nav a:hover {
     color: var(--primary-d);
 }
 
-header img.logo {
+img.logo {
     width: 200px;
+    aspect-ratio: 304/105;
 }
 
 @media(max-width: 768px){
@@ -184,22 +185,31 @@ body#portada {
 body#portada .capsalera img {
     max-height: 80vh;
     clip-path: polygon(75% 0, 91% 18%, 83% 38%, 100% 56%, 94% 62%, 78% 57%, 60% 83%, 20% 100%, 3% 98%, 0 80%, 11% 66%, 2% 55%, 27% 17%);
+    aspect-ratio: 1920/1080;
 }
 
 .capsalera img {
 	aspect-ratio: 1918/700;
 }
 
-@media(max-width: 576px){
-	.capsalera img {
-		aspect-ratio: 543/758;
-	}
-}
-
 @media(max-width: 992px){
 	.capsalera img {
 		aspect-ratio: 935/700;
 	}
+
+    body#portada .capsalera img {
+        aspect-ratio: 992/745;
+    }
+}
+
+@media(max-width: 576px){
+	.capsalera img {
+		aspect-ratio: 543/758;
+	}
+
+    body#portada .capsalera img {
+        aspect-ratio: 1/1;
+    }
 }
 
 
@@ -219,6 +229,7 @@ img.producte_preview {
     width: 100%;
     clip-path: circle(65%);
     transition: clip-path 1s;
+    aspect-ratio: 1/1;
 }
 
 img.producte_preview:hover {
@@ -237,6 +248,7 @@ img.producte_preview:hover {
 
 #ingredients img {
     border-radius: 10px;
+    aspect-ratio: 1/1;
 }
 
 #mapa {
