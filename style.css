@@ -190,7 +190,7 @@ body#portada .capsalera img {
 }
 
 .capsalera img {
-    min-height: 700;
+    min-height: 700px;
 	aspect-ratio: 1918/700;
 }
 
