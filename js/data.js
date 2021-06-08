@@ -10,11 +10,11 @@ module.exports = {
             <p>Tot i aix&iacute;, l&apos;origen de la sobrassada sembla trobar-se a Sic&iacute;lia, on es practicava una t&egrave;cnica anomenada sopressa, que significa &quot;picat&quot;, aplicat a la carn per embotir. De Sic&iacute;lia pass&agrave; a Val&egrave;ncia mitjan&ccedil;ant el comer&ccedil; mar&iacute;tim, i de Val&egrave;ncia a Mallorca, on ja al segle xvi gaudia de tradici&oacute; la seva elaboraci&oacute;. El mot sobrassada, aix&iacute;, podria provenir de la t&egrave;cnica del picat o sopressa, o m&eacute;s b&eacute; del resultat de la seva aplicaci&oacute; amb el mot &ldquo;sopressata&rdquo;, i d&apos;aqu&iacute; soprassata i despr&eacute;s sobrassada.</p>
             <p>En un lloc fresc i sec poden durar un parell d&apos;anys, per&ograve; el m&eacute;s habitual &eacute;s consumir la llonganissa durant el primer hivern, les sobrassades a la primavera/estiu, i les m&eacute;s grosses (bisbe) se solen consumir quan es fa la matan&ccedil;a (es fan a l&apos;hivern) de l&apos;any seg&uuml;ent.</p>
             <p>Tamb&eacute; s&apos;empra per a cuinar i en rebosteria.</p>`,
-            imatge: {'500': "sobrassada-500.jpg",
-                    'default': "sobrassada.jpg"},
-            background: {'500': "sobrassada_bg-500.jpg",
-                        '937': "sobrassada_bg-937.jpg",
-                        'default': "sobrassada_bg.jpg"},
+            imatge: {'500': "sobrassada-500.webp",
+                    'default': "sobrassada.webp"},
+            background: {'500': "sobrassada_bg-500.webp",
+                        '937': "sobrassada_bg-937.webp",
+                        'default': "sobrassada_bg.webp"},
             comercos: [
                 1
             ],
@@ -28,11 +28,11 @@ module.exports = {
             <p>Les panades eren elaboracions molt preuades a l'època moderna. De la mateixa manera que les coques de recapte, admetien tot tipus de variacions. Es farcien amb carn, peix i sobretot verdures, ja que era l'opció més econòmica. En aquell temps, els espinacs a la catalana, amb panses i pinyons, ja eren molt populars i era freqüent utilitzar-los per farcir els panadons.</p>
             <p>Ja s'esmenten en el Llibre de Sent Sovídel segle xiv, el primer receptari conegut de cuina catalana. Concretament descriu tres receptes en els capítols 134, 138 i 139 que elaborava el panicer com s'anomenava a l'època al forner. Eren preparacions molt populars als Països Catalans i a tot Europa fins a final del segle xvii. Apareixen per exemple als receptaris antics Arte de Cozina de Diego Granado (1599) o bé Le pastissier françois (1653)</p>
             <p>Els panadons es condimentaven amb espècies per aconseguir sabors més intensos i també admetien opcions dolces, com els de fruites. Aquestes menges eren fàcils de conservar i transportar, i es podien prendre tant calentes com fredes, característiques que resultaven molt pràctiques per als viatgers de l'època.</p>`,
-            imatge: {'500': "panada-500.jpg",
-                    'default': "panada.jpg"},
-            background: {'500': "panada_bg-500.jpg",
-                        '937': "panada_bg-937.jpg",
-                        'default': "panada_bg.jpg"},
+            imatge: {'500': "panada-500.webp",
+                    'default': "panada.webp"},
+            background: {'500': "panada_bg-500.webp",
+                        '937': "panada_bg-937.webp",
+                        'default': "panada_bg.webp"},
             comercos: [
                 1, 2
             ],
@@ -45,11 +45,11 @@ module.exports = {
             descripcio: `<p>El rubiol &eacute;s una pasta t&iacute;pica de Mallorca i Menorca consistent en una pe&ccedil;a de pasta de farina fina, pastada amb oli, sa&iuml;m i ou, doblegada en forma semicircular i amb un farcit dol&ccedil; o salat.</p>
             <p>A Mallorca, els rubiols s&oacute;n dol&ccedil;os i poden estar farcits de brossat, flam, confitura o altres dol&ccedil;os. Els rubiols a Menorca s&oacute;n salats i es mengen t&iacute;picament per festes majors. Aquests poden ser de sofregit, de peix, de carn o d&apos;espinacs, que solen tenir tamb&eacute; panses i pinyons.</p>
             <p>&Eacute;s tamb&eacute; una menja t&iacute;pica de les festes de Pasqua</p>`,
-            imatge: {'500': "rubiol-500.jpg",
-                    'default': "rubiol.jpg"},
-            background: {'500': "rubiols_bg-500.jpg",
-                        '937': "rubiols_bg-937.jpg",
-                        'default': "rubiols_bg.jpg"},
+            imatge: {'500': "rubiol-500.webp",
+                    'default': "rubiol.webp"},
+            background: {'500': "rubiols_bg-500.webp",
+                        '937': "rubiols_bg-937.webp",
+                        'default': "rubiols_bg.webp"},
             comercos: [
                 2
             ],
@@ -62,7 +62,7 @@ module.exports = {
             id: 1,
             nom: 'Carnisseria alt',
             descripcio: 'Desde 1978 tots els productes carnics',
-            logo: 'carnisseria1.png',
+            logo: 'carnisseria1.webp',
             direccio: 'Carrer del General Barceló 07260 Porreres',
             coordenades: [39.5145835,3.021983]
         },
@@ -70,7 +70,7 @@ module.exports = {
             id: 2,
             nom: 'Forn de plaça',
             descripcio: 'Forn de poble de tota la vida',
-            logo: 'forn1.png',
+            logo: 'forn1.webp',
             direccio: 'Carrer de sa Galla 07260 Porreres',
             coordenades: [39.515823, 3.022227]
         },
